@@ -48,6 +48,21 @@
   src: url('./assets/fonts/inter-v20-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+:root {
+  --footer-bg: #FFF2F1;
+  --hero-bg: #FEEAE9;
+
+  --blue: #3F07F8;
+  --light-pink: #FF589B;
+  --orange: #FF9C35;
+  --pink: #FF136F;
+
+  --blackish-color: #1F1F1F;
+  --grayish-color: #4E4E4E;
+
+  --btn-gradiant: linear-gradient(to bottom, var(--light-pink), var(--pink))
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -100,4 +115,16 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.hero-section {
+  display: flex;
+  padding: 2.5rem 3rem;
+  border-radius: 1rem;
+  background-color: var(--hero-bg);
+
+  h1 {
+    font-style: 700;
+    font-size: 3.5rem;
+  }
 }
