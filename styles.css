@@ -74,11 +74,19 @@ img, picture {
   max-width: 100%;
 }
 
-button {
+.btn {
+  display: block;
+  max-width: fit-content;
+
+  font-weight: 500;
   font: inherit;
-  background-color: unset;
+  text-transform: uppercase;
+
+  color: white;
+  background-color: var(--blackish-color);
+
   border: none;
-  border-radius: none;
+  border-radius: 0.5rem;
 }
 
 p, h1, h2, h3 {
@@ -87,14 +95,16 @@ p, h1, h2, h3 {
 p {
   text-wrap: pretty;
 }
-h1, h2, h3 {
+h1, h2, h3, .price {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   text-wrap: balance;
+  color: var(--blackish-color);
 }
 
 body {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
   line-height: 1.5;
+  color: var(--grayish-color);
   -webkit-font-smoothing: antialiased;
 
   width: 100%;
@@ -119,12 +129,41 @@ nav {
 
 .hero-section {
   display: flex;
-  padding: 2.5rem 3rem;
+  flex-direction: column;
+  row-gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
   border-radius: 1rem;
   background-color: var(--hero-bg);
 
   h1 {
     font-style: 700;
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 1.3115rem + 2.9376vw, 3.5rem);
+    margin-block-end: 0.5rem;
+  }
+
+  p {
+    width: 100%;
+    max-width: 46ch;
+    margin-block-end: 1.5rem;
+  }
+
+  .price {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--pink);
+    margin-block-end: 0.5rem;
+  }
+
+  .btn {
+    padding: 1rem 3.5rem;
+    background-image: var(--btn-gradiant);
+  }
+
+  @media (min-width: 40rem) {
+    flex-direction: row;
+    padding: 2.5rem 3rem;
   }
 }
