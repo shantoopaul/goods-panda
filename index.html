@@ -11,9 +11,15 @@
       <a href="/">
         <img src="./assets/logo.png" alt="Goods Panda" />
       </a>
-      <a href="/">
-        <img src="./assets/menu-bar.png" alt="Hamburger Icon" />
-      </a>
+      <button class="btn" popovertarget="my-dialog">
+        <img src="./assets/menu-bar.png" alt="" />
+      </button>
+
+      <dialog id="my-dialog" popover>
+        <img src="./assets/panda.svg" alt="" />
+        <p class="inter">Nothing to see here</p>
+        <button popovertarget="my-dialog" popovertargetaction="hide">Close</button>
+      </dialog>
     </nav>
 
     <main>
@@ -163,7 +169,7 @@
         <p>Get updates on sales specials and more</p>
       </hgroup>
        <form class="newsletter">
-        <input type="email" placeholder="Enter your email">
+        <input type="email" name="email" placeholder="Enter your email" autocomplete="email">
         <button class="btn" type="submit">Send</button>
         </form>
     </section>

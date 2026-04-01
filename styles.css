@@ -152,6 +152,54 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding-block: 2rem 3rem;
+
+  .btn {
+    anchor-name: --menu-btn;
+    background-color: transparent;
+  }
+
+  dialog[popover] {
+    position-anchor: --menu-btn;
+    top: anchor(bottom);
+    left: calc(anchor(left) - 152px);
+
+    border-radius: 12px;
+    border: 2px solid var(--blackish-color);
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  dialog img {
+    width: 8rem;
+    margin: 0 auto 1rem;
+  }
+
+  dialog p {
+    margin-block-end: 1rem;
+  }
+
+  dialog button {
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: clamp(1rem, 0.8853rem + 0.4896vw, 1.25rem);
+
+    background: linear-gradient(
+      to bottom,
+      var(--light-pink),
+      var(--pink),
+      var(--light-pink)
+    );
+    background-size: 100% 200%;
+    background-position: top;
+
+    transition: background-position 0.3s ease;
+  }
+
+  dialog button:hover {
+    background-position: bottom;
+  }
 }
 
 .hero-section {
