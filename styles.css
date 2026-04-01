@@ -64,7 +64,8 @@
   --newsletter-text: #707070;
   --newsletter-input: #CCCCCC;
 
-  --btn-gradiant: linear-gradient(to bottom, var(--light-pink), var(--pink))
+  --btn-gradiant: linear-gradient(to bottom, var(--light-pink), var(--pink));
+  --btn-gradiant2: linear-gradient(to bottom, var(--pink), var(--light-pink));
 }
 
 * {
@@ -188,7 +189,22 @@ nav {
 
   .btn {
     padding: 1rem 3.5rem;
-    background-image: var(--btn-gradiant);
+    font-size: clamp(1rem, 0.8853rem + 0.4896vw, 1.25rem);
+
+    background: linear-gradient(
+      to bottom,
+      var(--light-pink),
+      var(--pink),
+      var(--light-pink)
+    );
+    background-size: 100% 200%;
+    background-position: top;
+
+    transition: background-position 0.3s ease;
+  }
+
+  .btn:hover {
+    background-position: bottom;
   }
 
   @media (min-width: 40rem) {
@@ -376,10 +392,17 @@ nav {
     width: 100%;
     max-width: 100%;
     font-size: clamp(1.25rem, 1.1353rem + 0.4896vw, 1.5rem);
-    font-weight: 500;
     border-radius: 0.375rem;
     padding: 1.125rem 3rem;
-    background: var(--btn-gradiant);
+    background: linear-gradient(
+      to bottom,
+      var(--light-pink),
+      var(--pink),
+      var(--light-pink)
+    );
+    background-size: 100% 200%;
+    background-position: top;
+    transition: background-position 0.3s ease;
 
     @media (min-width: 40rem) {
       max-width: fit-content;
@@ -387,6 +410,10 @@ nav {
       border-top-right-radius: 0.375rem;
       border-bottom-right-radius: 0.375rem;
     }
+  }
+
+  .btn:hover {
+    background-position: bottom;
   }
 }
 
@@ -401,4 +428,12 @@ nav {
   60% {
     transform: translateX(-4px);
   }
+}
+
+:focus {
+	outline: none;
+}
+
+:focus-visible {
+	outline: 3px solid var(--light-pink);
 }
