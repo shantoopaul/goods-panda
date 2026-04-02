@@ -1,24 +1,72 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Metatags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Goods Panda - Ecommerce Landing Page</title>
+    <meta name="author" content="Shanto Paul" />
+    <meta name="description" content="Goods Panda - Ecommerce Landing Page">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/panda-icon.svg" />
+    <!-- Preload fonts -->
+    <link
+			rel="preload"
+			href="./assets/fonts/inter-v20-latin-500.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin />
+    <link
+			rel="preload"
+			href="./assets/fonts/inter-v20-latin-regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin />
+    <link
+			rel="preload"
+			href="./assets/fonts/poppins-v24-latin-500.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin />
+    <link
+			rel="preload"
+			href="./assets/fonts/poppins-v24-latin-600.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin />
+    <link
+			rel="preload"
+			href="./assets/fonts/poppins-v24-latin-700.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin />
+    <link
+			rel="preload"
+			href="./assets/fonts/poppins-v24-latin-regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin />
+    <!-- Preload images -->
+    <link
+			rel="preload"
+			as="image"
+			href="./assets/hero-tv.png" />
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="./styles.css" />
+    <title>Goods Panda - Ecommerce Landing Page</title>
   </head>
   <body>
     <nav>
       <a href="#">
         <img src="./assets/logo.png" alt="Goods Panda" />
       </a>
-      <button class="btn" popovertarget="my-dialog">
+      <button class="btn" popovertarget="open-modal" name="open-modal">
         <img src="./assets/menu-bar.png" alt="" />
       </button>
 
-      <dialog id="my-dialog" popover>
-        <img src="./assets/panda.svg" alt="" />
+      <dialog id="open-modal" popover>
+        <img src="./assets/panda.svg" alt="" loading="lazy" />
         <p class="inter">Nothing to see here</p>
-        <button popovertarget="my-dialog" popovertargetaction="hide">Close</button>
+        <button popovertarget="open-modal" popovertargetaction="hide" name="close-modal">Close</button>
       </dialog>
     </nav>
 
@@ -35,7 +83,7 @@
           <button class="btn inter">Buy now</button>
         </div>
         <picture>
-          <img src="./assets/hero-tv.png" alt="">
+          <img src="./assets/hero-tv.png" alt="" fetchpriority="high">
         </picture>
       </header>
 
@@ -62,7 +110,7 @@
         <div class="card-container">
           <div class="card">
           <picture class="card-img">
-            <img src="./assets/shoes-images/shoe-1.png" alt="">
+            <img src="./assets/shoes-images/shoe-1.png" alt="" loading="lazy">
           </picture>
           <div class="card-text">
             <h3>Reebok Dart Men's Shoes</h3>
@@ -71,14 +119,14 @@
             </p>
             <span class="price poppins">$1289</span>
             <button class="btn inter">Buy now <div class="bounce">
-              <img src="./assets/arrow-sm-right.svg" alt="">
+              <img src="./assets/arrow-sm-right.svg" alt="" loading="lazy">
             </div></button>
           </div>
         </div>
 
         <div class="card">
           <picture class="card-img">
-            <img src="./assets/shoes-images/shoe-2.png" alt="">
+            <img src="./assets/shoes-images/shoe-2.png" alt="" loading="lazy">
           </picture>
           <div class="card-text">
             <h3>Reebok Pump</h3>
@@ -87,14 +135,14 @@
             </p>
             <span class="price poppins">$799</span>
             <button class="btn inter">Buy now <div class="bounce">
-              <img src="./assets/arrow-sm-right.svg" alt="">
+              <img src="./assets/arrow-sm-right.svg" alt="" loading="lazy">
             </div></button>
           </div>
         </div>
 
         <div class="card">
           <picture class="card-img">
-            <img src="./assets/shoes-images/shoe-3.png" alt="">
+            <img src="./assets/shoes-images/shoe-3.png" alt="" loading="lazy">
           </picture>
           <div class="card-text">
             <h3>Reebok All Terrain</h3>
@@ -103,7 +151,7 @@
             </p>
             <span class="price poppins">$699</span>
             <button class="btn inter">Buy now <div class="bounce">
-              <img src="./assets/arrow-sm-right.svg" alt="">
+              <img src="./assets/arrow-sm-right.svg" alt="" loading="lazy">
             </div></button>
           </div>
         </div>
@@ -115,7 +163,7 @@
         <div class="card-container">
           <div class="card">
           <picture class="card-img">
-            <img src="./assets/backpack-images/bag-1.png" alt="">
+            <img src="./assets/backpack-images/bag-1.png" alt="" loading="lazy">
           </picture>
           <div class="card-text">
             <h3>Ison Backpack</h3>
@@ -124,14 +172,14 @@
             </p>
             <span class="price poppins">$1289</span>
             <button class="btn inter">Buy now <div class="bounce">
-              <img src="./assets/arrow-sm-right.svg" alt="">
+              <img src="./assets/arrow-sm-right.svg" alt="" loading="lazy">
             </div></button>
           </div>
         </div>
 
         <div class="card">
           <picture class="card-img">
-            <img src="./assets/backpack-images/bag-2.png" alt="">
+            <img src="./assets/backpack-images/bag-2.png" alt="" loading="lazy">
           </picture>
           <div class="card-text">
             <h3>Biaowang Backpack</h3>
@@ -140,14 +188,14 @@
             </p>
             <span class="price poppins">$799</span>
             <button class="btn inter">Buy now <div class="bounce">
-              <img src="./assets/arrow-sm-right.svg" alt="">
+              <img src="./assets/arrow-sm-right.svg" alt="" loading="lazy">
             </div></button>
           </div>
         </div>
 
         <div class="card">
           <picture class="card-img">
-            <img src="./assets/backpack-images/bag-3.png" alt="">
+            <img src="./assets/backpack-images/bag-3.png" alt="" loading="lazy">
           </picture>
           <div class="card-text">
             <h3>Dxyizu Smart Backpack</h3>
@@ -156,7 +204,7 @@
             </p>
             <span class="price poppins">$699</span>
             <button class="btn inter">Buy now <div class="bounce">
-              <img src="./assets/arrow-sm-right.svg" alt="">
+              <img src="./assets/arrow-sm-right.svg" alt="" loading="lazy">
             </div></button>
           </div>
         </div>

@@ -55,7 +55,8 @@
   --blue: #3F07F8;
   --light-pink: #FF589B;
   --soft-pink: #FFF2F1;
-  --orange: #FF9C35;
+  /* --orange: #E58D2E; */
+  --orange: #e98a25;
   --pink: #FF136F;
 
   --blackish-color: #1F1F1F;
@@ -161,11 +162,11 @@ nav {
   dialog[popover] {
     position-anchor: --menu-btn;
     top: anchor(bottom);
-    left: calc(anchor(left) - 152px);
+    left: calc(anchor(left) - 200px);
 
     border-radius: 12px;
     border: 2px solid var(--blackish-color);
-    padding: 1.5rem;
+    padding: 1.5rem 3rem;
     text-align: center;
   }
 
