@@ -14,7 +14,7 @@
 <h2>Tech Stack</h2>
 <p>This website is built for speed, resilience, and geospatial accuracy.</p>
 
-<table align="center">
+<table>
   <thead>
     <tr>
       <th><strong>Component</strong></th>
@@ -35,10 +35,20 @@
       <td>
         <img src="https://skillicons.dev/icons?i=netlify" valign="middle" alt="Netlify">
       </td>
-      <td>Netlify was used to deploy this project</td>
+      <td>Netlify is used to deploy this project</td>
     </tr>
   </tbody>
 </table>
+
+<h2>File Structure</h2>
+<pre>
+.
+├── assets                  # Images and icons are stored here
+├── index.html
+├── styles.css
+└── README.md
+</pre>
+
 <h2>PageSpeed Insights Performance Score</h2>
 <table align="center">
     <thead>
